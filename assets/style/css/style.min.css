@@ -1,0 +1,40 @@
+@charset "utf-8";
+a,a:focus,a:hover{text-decoration:none}
+a,a img{cursor:pointer}
+*,ul{padding:0}
+*{margin:0 auto}
+a{color:#000;transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;-o-transition:.5s}
+a:focus,a:hover{color:#6367ec;transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;-o-transition:.5s}
+ul{list-style:none;margin:0}
+.errorMessage{color:#c30;margin:0 5px;vertical-align:middle}
+.title,.title a,body{color:#333}
+.errorMessage:before{vertical-align:inherit}
+.errorMessage.top{vertical-align:top}
+[class*=" xy-col-"],[class^=xy-col-]{float:left;min-height:1px;position:relative}
+.xySation{visibility:hidden;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;-moz-opacity:0;opacity:0}
+.xySationShow{visibility:visible;-moz-opacity:1;opacity:1;-webkit-animation:fadeInUp 1s;-ms-animation:fadeInUp 1s;animation:fadeInUp 1s}
+@media (max-width:767.98px){.xySation{-moz-opacity:1;opacity:1}
+}
+html{font-size:12px}
+body{position:relative;overflow-y:scroll;font-family:Verdana,"微软雅黑","宋体";font-size:1em;line-height:2}
+.xy-container,.xy-container-fluid{width:100%}
+@media (min-width:992px){html{font-size:13px}
+}
+@media (min-width:1200px){html{font-size:14px}
+}
+@media (min-width:1257px){.xy-container{width:1240px}
+.xy-container-fluid{min-width:1240px}
+}
+.title{padding:20px 0;font-size:20px;font-weight:700;line-height:1.25;text-align:center;text-transform:capitalize}
+.title hr{width:70px;margin:3px auto 0;border-top:4px #efae1c solid;-webkit-box-shadow:0 1px 2px rgb(0 0 0 / .6);box-shadow:0 1px 2px rgb(0 0 0 / .6)}
+.title small{display:block;color:#333;font-size:65%;font-weight:400}
+@media (min-width:768px){.title{font-size:24px}
+.title hr{width:120px;margin-top:5px}
+}
+@media (min-width:992px){.title{font-size:28px}
+}
+@media (min-width:1200px){.title{font-size:32px}
+}
+.pager{width:94%;margin:20px auto}
+.pager li>a,.pager li>span,.pagination>li>a,.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span,.pagination>li>span:focus,.pagination>li>span:hover{color:#3e3689}
+.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{background-color:#3e3689;border-color:#3e3689}

@@ -1,0 +1,123 @@
+@charset "utf-8";
+/*
+background-size:cover;背景铺满元素,调整背景图片的宽度或高度（较小者），以铺满整个元素保持背景图片的宽高比
+background-size:contain;元素包含整个背景图片,调整背景图片的宽度或高度（较大者），使背景图片完全包含在元素中保持背景图片的宽高比,背景铺满元素
+rgba(r,g,b,opacity) 颜色透明度设置，不影响内容
+背景透明：background-color:rgba(255, 255, 255, 0);
+边框线透明：border-color:rgba(255, 255, 255, 0);
+文字透明：color:rgba(255, 255, 255, 0);
+*/
+* {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+} /*标签换行，不会产生错位*/
+.space {
+  clear: both;
+  display: block;
+  font-size:1em;
+  line-height: 2;
+} /*标签间距*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} /*自动截断代码*/
+.indent { text-indent: 2em; } /*中文首行空两格*/
+.null {
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+} /*不显示文字*/
+.PageNext {
+  page-break-after: always;
+  font-size: 0;
+  line-height: 0;
+} /*打印换页*/
+@page WordRow{size:595.3pt 841.9pt; layout-grid:15.6pt;}
+div.WordRow{page:WordRow;}
+/*一个页面用一个div包含，调用.WordRow类，WORD打开HTML页面时显示竖排*/
+@page WordCol{size:841.9pt 595.3pt;}
+div.WordCol{page:WordCol;}
+/*一个页面用一个div包含，调用.WordCol类，WORD打开HTML页面时显示横排*/
+/*
+<br style='page-break-before:always; mso-break-type:section-break;'>
+WORD页面的换页，并可区分竖排与横排，必须放在br标签内，样式必须写在标签上，独立出来无效
+*/
+@media print {
+.no-print { display: none; }
+} /*打印时隐藏*/
+.xy-container-fluid, .xy-container {
+  clear: both;
+  margin-right: auto;
+  margin-left: auto;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/*HTML5鼠标滚动翻屏，当前屏.fadeInDown*/
+body.html5 { overflow: hidden; }
+body.html5 section, body.html5 article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body.html5 .sectionWrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+[class^="xy-show-"], [class*=" xy-show-"] {
+display:none !important;
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1500px) {
+}
+@media (max-width: 767px) {
+.xy-show-block-xs { display: block !important; }
+.xy-show-inline-xs { display: inline !important; }
+.xy-show-inline-block-xs { display: inline-block !important; }
+.xy-show-table-tr-xs {display:table-row !important;}
+.xy-hide-xs { display: none !important; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+.xy-show-block-s { display: block !important; }
+.xy-show-inline-s { display: inline !important; }
+.xy-show-inline-block-s { display: inline-block !important; }
+.xy-show-table-tr-s {display:table-row !important;}
+.xy-hide-s { display: none !important; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+.xy-show-block-m { display: block !important; }
+.xy-show-inline-m { display: inline !important; }
+.xy-show-inline-block-m { display: inline-block !important; }
+.xy-show-table-tr-m {display:table-row !important;}
+.xy-hide-m { display: none !important; }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+.xy-show-block-l { display: block !important; }
+.xy-show-inline-l { display: inline !important; }
+.xy-show-inline-block-l { display: inline-block !important; }
+.xy-show-table-tr-l {display:table-row !important;}
+.xy-hide-l { display: none !important; }
+}
+@media (min-width: 1500px) {
+.xy-show-block-xl { display: block !important; }
+.xy-show-inline-xl { display: inline !important; }
+.xy-show-inline-block-xl { display: inline-block !important; }
+.xy-show-table-tr-xl {display:table-row !important;}
+.xy-hide-xl { display: none !important; }
+}

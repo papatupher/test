@@ -1,0 +1,1 @@
+const http=require("http"),fs=require("fs"),server=http.createServer((e,t)=>{t.writeHead(200,{"content-type":"text/html"}),fs.createReadStream("index.html").pipe(t)});server.listen(process.env.PORT||3e3);
